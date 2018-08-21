@@ -15,7 +15,7 @@ job('NodeJS-Docker-example') {
     steps {
         dockerBuildAndPublish {
             repositoryName('randylerma/nodejs-example')
-            tag('${BUILD_TIMESTAMP}-${GIT_REVISION,length=9}')
+            tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub')
             forcePull(false)
             forceTag(false)
